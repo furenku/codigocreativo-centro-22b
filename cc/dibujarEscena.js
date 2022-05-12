@@ -1,4 +1,4 @@
-function luces() {
+function drawLights() {
     
     pointLight( 255, 150+(frameCount*2) % 55, 255, 0, -250, 100 )
 
@@ -20,7 +20,7 @@ function dibujarPiso() {
 
 function dibujarEscena() {
 
-    luces()
+    drawLights()
 
     dibujarPiso()
 
