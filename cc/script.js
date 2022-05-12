@@ -1,9 +1,16 @@
 function setup() {
-    createCanvas(windowWidth, windowHeight)
+
+    createCanvas( windowWidth, windowHeight, WEBGL )
+
 }
+
 
 function draw() {
     
-    background( frameCount % 220 )
+    background( 0 )
+
+    dibujarEscena()
+
+    colocarCamara()
 
 }
