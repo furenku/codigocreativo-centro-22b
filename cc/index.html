@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito Cerrado</title>
+
+    <style>
+        html, body {
+
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        #contenido-web {
+            position: fixed;
+            z-index: 1;
+            display: grid;
+            width: 100%;
+            height: 100%;
+            place-items: center;
+        }
+
+        #contenido-web.cerrada {
+            display: none;
+        }
+
+        .contenedor {
+            width: 50vw;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .contenedor header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="contenido-web">
+        <div class="contenedor">
+            <header>
+                <button onclick="cerrarVentana()">Cerrar</button>
+            </header>
+            <h1>
+                Circuito Cerrado
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio asperiores voluptate ipsam impedit quam, iusto odit nihil tenetur quasi! Atque nemo neque commodi odit voluptatum, deleniti ut eveniet? Aut similique blanditiis placeat omnis quia saepe quasi dolorem quis molestiae ex eos tenetur veniam ad iste expedita modi explicabo, eaque laudantium provident nulla culpa non repudiandae illo. Hic aut est voluptatum itaque tempora commodi amet! Nesciunt numquam quas ratione sequi, repudiandae dolor error? Accusantium ab nihil rem pariatur commodi! Obcaecati excepturi, explicabo vero expedita sit, rem commodi consequatur dolor minima beatae aliquid qui itaque eaque facilis minus ut, illum quas eveniet!</p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+    
+    <script src="interfaz.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
