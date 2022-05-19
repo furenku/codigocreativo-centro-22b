@@ -21,7 +21,7 @@
             z-index: 0;
         }
 
-        #contenido-web {
+        #web-content {
             position: fixed;
             z-index: 1;
             display: grid;
@@ -30,16 +30,16 @@
             place-items: center;
         }
 
-        #contenido-web.cerrada {
+        #web-content.closed {
             display: none;
         }
 
-        .contenedor {
+        .container {
             width: 50vw;
             padding: 2rem;
             background-color: #fff;
         }
-        .contenedor header {
+        .container header {
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -50,10 +50,10 @@
 </head>
 <body>
     
-    <div id="contenido-web">
-        <div class="contenedor">
+    <div id="web-content">
+        <div class="container">
             <header>
-                <button onclick="cerrarVentana()">Cerrar</button>
+                <button onclick="windowClose()">Cerrar</button>
             </header>
             <h1>
                 Soy una web
@@ -65,7 +65,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
     
-    <script src="interfaz.js"></script>
+    <script src="interface.js"></script>
     <script src="script.js"></script>
 
 </body>
