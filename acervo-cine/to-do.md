@@ -8,9 +8,15 @@
 - [x] Pintar imágenes de solo una categoría
 - [x] Elegir una categoría
 
-- [ ] Centrar imágenes
+
+- [x] Implementar cambio de contenido manual (skip)
+
+- [ ] Pintar imágenes de manera centrada (por corregir)
+
+- [ ] Presentar texto de imágenes de manera ordenada
+
 - [ ] Implementar secuenciado de materiales en el tiempo
-- [ ] Implementar cambio de contenido manual (skip)
+
 
 
 ### Navegación

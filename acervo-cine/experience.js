@@ -1,4 +1,5 @@
 let currentCategory
+let currentImage
 
 
 function preloadImages() {
@@ -18,6 +19,7 @@ function categoryLoad( category ) {
 function experienceSetup() {
 
     currentCategory = db.category1
+    currentImage = 0
 
 }
 
@@ -32,7 +34,7 @@ function experienceDraw() {
     rect( 0, 0, width, height )
 
 
-    currentCategory.forEach( imageDraw )
+    imageDraw( currentCategory[currentImage] )
 
 
     
@@ -41,15 +43,49 @@ function experienceDraw() {
 
 
 
-function imageDraw( img, i ) {
+function imageDraw( img ) {
 
-    image( img.image, i*100, i*100, 100, 100 )
+    let vertical = img.image.height > img.image.width
+
+
+    let imgW
+    let imgH
+
+    let aspectRatio = img.image.width / img.image.height
+
+    if( vertical ) {
+        
+        let w = min( height, img.image.width / aspectRatio )
+        let h = w / aspectRatio
+
+        imgW = w
+        imgH = h
+    } else {
+
+        let h = min( height, img.image.width * aspectRatio )
+        let w = h * aspectRatio
+
+        imgW = w
+        imgH = h
+
+    }
+
+
+
+    let imgX = ( width - imgW ) / 2
+    let imgY = ( height - imgH ) / 2
+
+    let textX = width - 200
+    let textY = height / 2
+
+    image( img.image, imgX, imgY, imgW, imgH )
 
     fill( '#' + img.color )
 
-    text( img.title, i*100, i*100+120 )
-    text( img.author, i*100, i*100+150 )
-    text( img.text, i*100, i*100+180 )
+
+    text( img.title, textX, textY+20 )
+    text( img.author, textX, textY+50 )
+    text( img.text, textX, textY+80 )
 
 }
 
@@ -61,9 +97,19 @@ function categoryChoose( number ) {
     let nextKey = keys[ (number-1) % keys.length ]
 
     currentCategory = db[ nextKey ]
+    currentImage = 0
 
 }
 
+
+
+
+function imageNext() {
+
+    currentImage++
+    currentImage %= currentCategory.length
+
+}
 
 
 
