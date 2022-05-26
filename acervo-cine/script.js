@@ -6,8 +6,12 @@ function preload() {
 
 
 function setup() {
+    
     createCanvas(windowWidth, windowHeight)
     colorMode( HSB, 1, 1, 1, 1 )
+    
+    experienceSetup()
+
 }
 
 function draw() {
@@ -17,3 +21,15 @@ function draw() {
     menuDraw()
 
 }
+
+
+
+
+function keyPressed() {
+
+    if( parseInt(key) > 0 ) {
+        categoryChoose( parseInt(key) )
+    }
+
+}
+
